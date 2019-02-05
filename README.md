@@ -1,6 +1,3 @@
-# javascript_summary
-README.md with all the details of getting started with Javascript and some extras on React.
-
 # Starlime Web Javascipt Documentation Standards & Naming Conventions.
  Bonus: Small Introduction to JavaScript and ES6(ECMAScript2015 - used in ReactJS and React-Native platforms, possible in web because of babel transpiler). 
  
