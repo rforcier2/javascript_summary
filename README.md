@@ -130,7 +130,7 @@ var  person = {
 ## Naming Conventions
 
 -   Variable and function names written as  **camelCase**
--   Constants (like PI) written in  **UPPERCASE**
+-   Constants (like PI) written in  **PascalCase**
  - Hyphens can be mistaken as subtraction attempts. Hyphens are NOT    	allowed in JavaScript names.
 
 
@@ -222,14 +222,14 @@ add();
 ### Local Variable Declaration and Functionality
 Example:
 ```js
-const add = (function(){
+const Add = (function(){
 	let counter = 0;
     return ()=>{
     	counter += 1; 
 	return counter;
     }
 })();
-add();
+Add();
 ```
 - The variable  **add**  is assigned the return value of a self-invoking function.
 
@@ -487,7 +487,7 @@ for (let i in iterable){
 
 
 ## Promises:
-(I decided to give promises more room because they rock)
+(I decided to give promises more room because they *rock*)
 
 Unlike old-style passed-in callbacks, a promise comes with some guarantees:
 
@@ -498,8 +498,8 @@ Unlike old-style passed-in callbacks, a promise comes with some guarantees:
 One of the great things about using promises is  **chaining**.
 ### Chaining:
 ```js
-const promise = doSomething();
-const promise2 = promise.then(successCallback, failureCallback);
+const Promise = doSomething();
+const Promise_2 = promise.then(successCallback, failureCallback);
 ```
 In the old days, doing several asynchronous operations in a row would lead to the classic callback "hell":
 
@@ -513,7 +513,7 @@ doSomething(function(result) {
 }, failureCallback);
 ```
 
-With promises and arrow functions, look like this:
+With promises and arrow functions, promises now look like this:
 ```js
 doSomething()
 .then(result => doSomethingElse(result))
