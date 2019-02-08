@@ -492,8 +492,8 @@ for (let i in iterable){
 Unlike old-style passed-in callbacks, a promise comes with some guarantees:
 
 -   Callbacks will never be called before the  [completion of the current run](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion)  of the JavaScript event loop.
--   Callbacks added with `[then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)`  even  _after_  the success or failure of the asynchronous operation, will be called, as above.
--   Multiple callbacks may be added by calling `[then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)`  several times. Each callback is executed one after another, in the order in which they were inserted.
+-   Callbacks added with [then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)  even  _after_  the success or failure of the asynchronous operation, will be called, as above.
+-   Multiple callbacks may be added by calling [then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)  several times. Each callback is executed one after another, in the order in which they were inserted.
 
 One of the great things about using promises is  **chaining**.
 ### Chaining:
