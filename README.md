@@ -1,5 +1,5 @@
 # Starlime Web Javascipt Documentation Standards & Naming Conventions.
- Bonus: Small Introduction to JavaScript and ES6(ECMAScript2015 - used in ReactJS and React-Native platforms, possible in web because of transpilers). 
+ Bonus: Small Introduction to JavaScript and ES6(ECMAScript2015 - used in ReactJS and React-Native platforms. ES6 is almost fully compatible with most browsers. [Check here for compatability](https://kangax.github.io/compat-table/es6/)
  
  ### Good React Resources:
  [Facebook's React-Native Docs](https://facebook.github.io/react-native/docs/getting-started)
