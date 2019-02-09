@@ -901,7 +901,7 @@ return  i;
 ```
 
 
-## Updated React Preferences / Documentation:
+## Updated React Native Preferences / Documentation:
 
 ### !Troubleshooting First couple vids!
 First in the tutorial, you won't be able to get your native app up and running without adding :
@@ -941,7 +941,69 @@ const Header = () => {
 
 ```
 
-So instead of having a file with 20 const stylings, each component should reference their own styles in line.
+
+### Quick Introduction to ReactJS and how to use props
+
+App.js
+```js
+import React, { Component } from 'react';
+import './App.css';                       // note you can use external CSS files with ReactJS
+import Header from './Header';            // importing from another file in the same folder
+import Button from './Button';		
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+      <Header name="Student!" />         // Once you import, you can use these as Element Tags! Awesome!
+        <Button name="Click me!" />      // notice the _name=""_ part of the element. This is where things get interesting
+      </div>                             // check out Header.js file below to understand why _name=""_ is there.
+    );
+  }
+}
+
+export default App;
+
+```
+
+Header.js
+```js
+import React, { Component } from 'react';
+
+class Header extends React.Component {
+  render() {
+    return <h1>Welcome, {this.props.name}</h1>;   // THIS is where the _name=""_ property comes from. we can *name* it anything.
+  }						  // it could be this.props.title and in the App.js we would call _title=""_ instead
+}					          // although it just looks like a css selector, we can do MUCH more with it.
+					    	  
+export default Header;				  
+						  
+```
+ 
+We do this so that our Components become reusable. 
+We can change the HEADING element's properties from App.js, however we are able to keep reusing the same component multiple times in any number of  different applications. 
+ 
+Reusing components becomes a much more integral part of our applications when they begin to get large. Reusing components ensures they will behave in exactly the same way, no matter where you put them. 
+
+For example:
+You could have multiple buttons on your site with this code:
+
+Button.js
+```js
+import React, { Component } from 'react';
+
+class Button extends React.Component {
+  render() {
+    return <button>{this.props.name}</button>;
+  }
+}
+
+export default Button;
+```
+
+With this example, we can reuse the ***same*** Button component *multiple* times from our App.js file, but only change what the button says. This is useful if you have multiple buttons on your site used for logging in, subscribing to newsletters, or just navigating users around your page. 
+
+
 
 ## Wrap up
 That about wraps up all the quirks of JavaScript and es6 syntax that I believe will be relevant to the application. Hopefully this sort of guide can serve as a first place to search for answers and give good enough resources to grasp the concepts.
