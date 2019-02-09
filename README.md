@@ -222,14 +222,14 @@ add();
 ### Local Variable Declaration and Functionality
 Example:
 ```js
-const Add = (function(){
-	let counter = 0;
+const add = (function(){
+    let counter = 0;
     return ()=>{
     	counter += 1; 
 	return counter;
     }
 })();
-Add();
+add();
 ```
 - The variable  **add**  is assigned the return value of a self-invoking function.
 
@@ -242,6 +242,32 @@ Add();
 - The counter is protected by the scope of the anonymous function, and can only be changed using the add function.
 
 For More On JS Closures: [Read Here](https://www.w3schools.com/js/js_function_closures.asp) 
+
+
+Looking a little more closely at how this can interact with an HTML DOM Element:
+ - We want to initialize a counter on the page
+ - We want it to increment by one without using global variables, as then the variable can be accessed outside of its scope.
+
+## **A closure is a function having access to the parent scope, even after the parent function has closed**
+
+```js
+<button type="button" id="countButton">Count!</button>
+
+<p id="value">0</p>
+
+<script>
+
+const count = ( () => {
+  let int = 0;
+  return ()=> int += 1; return int;
+})();
+
+document.getElementById("countButton").onclick = function(){
+  document.getElementById("value").innerHTML = count();
+}
+</script>
+```
+
 
 ## B.  Variable / Functional Declarations at the Top of Scope:
 
