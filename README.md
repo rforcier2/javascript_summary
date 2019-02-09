@@ -273,7 +273,7 @@ Looking a little more closely at how this can interact with an HTML DOM Element:
   }
   </script>
 ```
-
+ - [Closures Demo on Codepen](https://codepen.io/rforcier2/pen/pGaBwK)
 
 ## B.  Variable / Functional Declarations at the Top of Scope:
 
