@@ -251,21 +251,27 @@ Looking a little more closely at how this can interact with an HTML DOM Element:
 ## **A closure is a function having access to the parent scope, even after the parent function has closed**
 
 ```js
-<button type="button" id="countButton">Count!</button>
+  <button id="countButton" type="button">Count!</button>
+  <p id="number">0</p>
 
-<p id="value">0</p>
+  <script>
+  const countButton = document.getElementById("countButton"),
+        number = document.getElementById("number");
 
-<script>
+  const count = 
+  	( () => {
+    	  let int = 0;
+    	
+          return () => {
+              int += 1; 
+              return int;
+          }
+  	})();
 
-const count = ( () => {
-  let int = 0;
-  return ()=> int += 1; return int;
-})();
-
-document.getElementById("countButton").onclick = function(){
-  document.getElementById("value").innerHTML = count();
-}
-</script>
+  countButton.onclick = function(){
+    number.innerHTML = count();
+  }
+  </script>
 ```
 
 
