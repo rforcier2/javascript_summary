@@ -309,7 +309,7 @@ Check out the following example:
 if (true) {
   var x = 5;
 }
-console.log(x);  
+console.log("x is " + x);  
 // x is 5
 ```
 **let**
@@ -318,7 +318,7 @@ console.log(x);
 if (true) {
   let y = 5;
 }
-console.log(y);  
+console.log("y is " + y);  
 // ReferenceError: y is not defined
 ```
 
