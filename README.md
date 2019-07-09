@@ -1,4 +1,4 @@
-# Starlime Web Javascipt Documentation Standards & Naming Conventions.
+# Starlime Web Javascript Documentation Standards & Naming Conventions.
  Bonus: Small Introduction to JavaScript and ES6(ECMAScript2015 - used in ReactJS and React-Native platforms. ES6 is almost fully compatible with most browsers. [Check here for compatability](https://kangax.github.io/compat-table/es6/)
  
  ### Good JavaScript Resources:
