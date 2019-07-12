@@ -249,6 +249,7 @@ add();
 
 For More On JS Closures: [Read Here](https://www.w3schools.com/js/js_function_closures.asp) 
 
+### See closures in action: [Finger Guessing Game on Codepen!](https://codepen.io/rforcier2/pen/mZooNq)
 
 Looking a little more closely at how this can interact with an HTML DOM Element:
  - We want to initialize a counter on the page
