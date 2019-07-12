@@ -650,6 +650,9 @@ doSomething()
 ```
 [Read More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
+If you would like some real examples of promises visit my codepen! 
+- [Get the Weather](https://codepen.io/rforcier2/pen/PrLjEO)
+- [Get your Github](https://codepen.io/rforcier2/pen/LKdmNy)
 
 ## Modularizing the React Workspace
 Sources:
