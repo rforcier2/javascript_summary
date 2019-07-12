@@ -1,4 +1,4 @@
-# Starlime Web Javascript Documentation Standards & Naming Conventions.
+# General Javascript Documentation Standards & Naming Conventions.
  Bonus: Small Introduction to JavaScript and ES6(ECMAScript2015 - used in ReactJS and React-Native platforms. ES6 is almost fully compatible with most browsers. [Check here for compatability](https://kangax.github.io/compat-table/es6/)
  
  ### Good JavaScript Resources:
@@ -456,7 +456,8 @@ console.log(materials.map(element => element.length));
 ```
 [Read More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 # 
-### Classes Example:
+
+### Class Declaration Example:
 ```js
 class Rectangle {
   constructor(height, width) {
@@ -471,6 +472,92 @@ class Rectangle {
 }
 ```
 [Read More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+### Classes (more in depth) Examples:
+
+```js
+class Rectangle { 
+    constructor(width, height){
+        this.width = width;
+        this.height = height;
+    }
+    
+    get area() {
+        return this.calcArea();
+    }
+    
+    calcArea() {
+        return this.height * this.width;
+    }
+    
+    get perimeter(){
+        return this.calcPerimeter();
+    }
+}
+
+Rectangle.prototype.calcPerimeter = function(){
+    return (this.height*2)+(this.width*2);
+}
+
+Object.defineProperty(Rectangle, 'diagonal', {get: function(){
+    return Math.sqrt(Math.pow(this.height, 2), Math.pow(this.width*2))} 
+});
+
+const mySquare = new Rectangle(20, 20);
+console.log( mySquare.area ); // 200
+console.log( mySquare.calcArea() ); // 200
+console.log( mySquare.perimeter ); // 80
+console.log( Number(mySquare.diagonal.toFixed(2)) ); // 28.28 
+// this formula is typically used for rectangles, but wil also work for 
+// squares (square formula is: diagonal = side*sqrt(2) ( or 28.28) )
+
+// Also used Number() to ensure we get an accurate number rather than
+// parseInt() method which... you guessed it, makes the number a round integer.
+// Fun fact: This method operates similarly to Math.floor() and will give you the nearest whole
+// integer less than the current value. (in this example we get 28, antoher: parseInt(2.9999) = 2.
+```
+
+To declare a new instance of an object we must use the _new_ keyword.
+For the example here we declared the variable 'mySquare' as a 'new Rectangle';
+
+The get the area we can use a get method. This creates a psuedo-property 'area' that, in this case, returns the result of another function. 
+
+As you see in the last example "Object.define property" defines a new get method for our class. 
+
+## This keyword
+ __this__ keyword is used to reference the current object. Every method / object has their own "this" keyword in reference to itself. We are declaring a constructor, which we will use to "contruct" our new object. If this was a person, maybe we would give them a constructor with a name and an age. But for this example, width and height do just fine.
+ You can reference the "this" keyword anywhere within the class, and through external prototype methods and the definition of get methods. 
+ 
+## Declaring Methods
+ in the class we declare mathods as 
+ ```js
+class Example{
+    constructor(){}
+    methodName(){
+        // code for this method here
+        return this;
+    }
+}
+ ```
+Every class needs a constructor method, whether or not you need it.
+
+## Prototype Methods
+
+If the method may be called many times, and you are in a massive workspace, with hundreds or even thousands of methods, you should get used to using prototype.
+These methods have access to all of the Object properties, but are not initiated with the object itself. Not only can you use prototype methods on objects YOU have declared, but also on built in Javascript objects. Since we have already seen a prototype method regarding an object we declared let's see one using the String object:
+
+```js
+String.prototype.index0length = function(){
+    return this.length-1;
+}
+
+var myStr = "people love me";
+console.log(myStr.length) //14
+console.log(myStr.index0length()); //13
+```
+Isn't that neat! Go forth and blossom and make those objects wish they had been initiated sooner! 
+
+
 # 
 
 ### Let + Const:
