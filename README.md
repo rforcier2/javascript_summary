@@ -508,11 +508,11 @@ const mySquare = new Rectangle(20, 20);
 console.log( mySquare.area ); // 200
 console.log( mySquare.calcArea() ); // 200
 console.log( mySquare.perimeter ); // 80
-console.log( Number(mySquare.diagonal.toFixed(2)) ); // 28.28 
+console.log( +(mySquare.diagonal.toFixed(2)) ); // 28.28 
 // this formula is typically used for rectangles, but wil also work for 
 // squares (square formula is: diagonal = side*sqrt(2) ( or 28.28) )
 
-// Also used Number() to ensure we get an accurate number rather than
+// Also used + (unary operator, can also use Number()) to ensure we get an accurate number rather than
 // parseInt() method which... you guessed it, makes the number a round integer.
 // Fun fact: This method operates similarly to Math.floor() and will give you the nearest whole
 // integer less than the current value. (in this example we get 28, antoher: parseInt(2.9999) = 2.
