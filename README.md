@@ -2,9 +2,11 @@
  Bonus: Small Introduction to JavaScript and ES6(ECMAScript2015 - used in ReactJS and React-Native platforms. ES6 is almost fully compatible with most browsers. [Check here for compatability](https://kangax.github.io/compat-table/es6/)
  
  ### Good JavaScript Resources:
- [W3Schools](https://www.w3schools.com/js/default.asp)
  
-[Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+ [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+ 
+ 
+ [W3Schools](https://www.w3schools.com/js/default.asp)
 
  
  ### Good React Resources:
