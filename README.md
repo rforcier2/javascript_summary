@@ -139,7 +139,8 @@ var  person = {
 
 -   Variable and function names written as  **camelCase**
 -   Constants (like PI) written in  **PascalCase**
- - Hyphens can be mistaken as subtraction attempts. Hyphens are NOT    	allowed in JavaScript names.
+-   Classes written in **PascalCase**
+-   Hyphens can be mistaken as subtraction attempts. Hyphens are NOT allowed in JavaScript names.
 
 
 #### If you still want/ need more info on javascript specific content please reference the  [MDN Dev Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
