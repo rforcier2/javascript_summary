@@ -138,7 +138,7 @@ var  person = {
 ## Naming Conventions
 
 -   Variable and function names written as  **camelCase**
--   Constants (like PI) written in  **PascalCase**
+-   Constants (like Pi) written in  **PascalCase**
 -   Classes written in **PascalCase**
 -   Hyphens can be mistaken as subtraction attempts. Hyphens are NOT allowed in JavaScript names.
 
