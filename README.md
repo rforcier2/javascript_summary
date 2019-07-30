@@ -96,7 +96,23 @@ console.log(values); // result: ["Volvo", "Saab", "Fiat"]
 function  toCelsius(fahrenheit) {  
     return  (5  /  9) * (fahrenheit -  32);  
 }
+
+// es6 arrow function:
+const toCelsuis = f => (5  /  9) * (f -  32);
 ```
+
+Small note on the difference in declarations:
+the arrow function doesn't need parenthesis because there is only one parameter and no curly braces because we are only returning a value. If you have more than one parameter you will need parenthesis (ie. (p1, p2) =>). or no parameters (ex. x = () => {}
+
+If you have operations to complete within the function, you will need to have curly braces AND a return statement
+```js
+const example = (name, title) => {
+    var year = new Date().getFullYear();
+    return 'Hello ' + title + ' ' +name + ' the year is ' + year;
+}
+```
+
+the *function declaration* (first one) can be accessed anywhere in the top of their scope. Simply put, if you have a function declaration after content that uses it, it is OK because it will be hoisted. However, with arrow functions, there is a top-to-bottom flow that will not allow you to utilize your functions this way. We will get more in depth on scope later with **closures**
 
 ### Loops:
 ```js
