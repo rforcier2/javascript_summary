@@ -1122,9 +1122,7 @@ With this example, we can reuse the ***same*** Button component *multiple* times
 
 
 ## Wrap up
-That about wraps up all the quirks of JavaScript and es6 syntax that I believe will be relevant to the application. Hopefully this sort of guide can serve as a first place to search for answers and give good enough resources to grasp the concepts.
-
-I will continue updating this project with more information as I progress through the app tutorial
+That about wraps up all the quirks of JavaScript and es6 syntax that I believe are relevant at this time. 
+My goal is that this sort of guide can serve as a first place to search for basic answers and be a good first resource for many beginners as they begin their journey.
 
 Thanks!
--Ronnie Forcier
